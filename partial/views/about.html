@@ -1,0 +1,54 @@
+<!-- About Page Section  -->
+<!-- Header of section -->
+<div class="container-full header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Certyfikaty</h2>
+                <h4 class="section-subheading text-muted">Zmagania w różnych dziedzinach</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-full bg-light-trans container-certificate">
+
+    <!-- Content of section -->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <div class="btn-group btn-primary" isotope-filter isotope-filter-event="filter-elements" isotope-filter-group="certyficate">
+                    <button isotope-filter-by="*" class="btn btn-default active">Wszystkie</button>
+                    <button isotope-filter-by=".programing" class="btn btn-default">Programowanie</button>
+                    <button isotope-filter-by=".networking" class="btn btn-default">Sieci</button>
+                    <button isotope-filter-by=".system" class="btn btn-default">Systemy</button>
+                </div>
+
+                <!-- attributes available: isotope-layout-mode="fitRows" isotope-item-selector="div" -->
+                <div isotope-grid="certList" isotope-reload-event="reload-elements"
+                     isotope-filter-event="filter-elements">
+
+                    <div class="element-item {{element.category}}" data-category="{{element.category}}" ng-repeat="element in certList">
+                        <img src="{{element.ico}}" />
+                        <h5 class="service-heading">{{element.name}}</h5>
+                        <a class="overlay" data-toggle="modal" data-target="#modal{{element.number}}">
+                            <i class="glyphicon glyphicon-zoom-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-repeat="cert in certList" id="modal{{cert.number}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal{{cert.number}}" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <h5 class="text-center">{{cert.name}}</h5>
+            <img src="{{cert.img}}" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
+

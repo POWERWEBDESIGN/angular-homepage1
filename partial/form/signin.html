@@ -1,0 +1,33 @@
+
+<div class="row row-centered" style="margin-bottom: 110px;">
+	<div class="col-sm-5 col-md-5 col-centered">
+		<div id="signin" class="jumbotron text-center box-shadow">
+		    <h2>Logowanie</h2>
+			<form name="loginForm" ng-submit="loginFormSubmit()" validate >
+
+			<div class="form-group">
+		        <input type="text" name="login" class="form-control" ng-model="login" required placeholder="Enter Your Login" ng-minlength="4" ng-maxlength="8">
+		        <span ng-show="loginForm.login.$invalid && !loginForm.login.$pristine" class="help-block"><small class="text-danger text-xs">Enter correct login.</small></span>
+		    </div>
+			<div class="form-group">
+		        <input type="password" name="password" class="form-control" ng-model="password" required placeholder="Enter Your Password">
+		        <span ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block">You password is required.</span>
+		    </div>
+
+			<a ui-sref="home">
+				<button type="button" class="btn btn-default">Anuluj</button>
+			</a>
+			<button type="submit" class="btn btn-primary">Zaloguj</button>
+			</form>
+			<br>
+			<a ui-sref="register" data-toggle="tab" data-target="#register" id="main-tab">Rejestracja</a>
+			<br>
+
+		</div>
+	</div>
+</div>
+
+<!-- z
+#fed136
+na
+#2257B8 -->

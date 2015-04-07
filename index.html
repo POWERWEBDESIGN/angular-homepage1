@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="routerApp">
+<head>
+    <meta name="description" content="Paweł Rostek - Strona Domowa, projektowanie stron internetowych, sklepy internetowe, portale, responsive, mobile compatybile">
+    <meta name="keywords" content="web design, angular, node, bootstrap, java script, jQuery, PHP, postgresql, mysql, database, database performance, security, zend framework, css3, html5, gentoo, linux, drupal, wordpress, git, network security">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="author" content="Pawel Rostek">
+    <title ng-bind="title"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS (load bootstrap) -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href='bower_components/angular-loading-bar/src/loading-bar.css' rel='stylesheet' />
+    <link href="bower_components/angular-block-ui/dist/angular-block-ui.min.css" rel="stylesheet" />
+
+
+    <!-- Custom CSS -->
+    <link href="public/css/main.css" rel='stylesheet'/>
+    <link href="public/css/timeline.css" rel='stylesheet'/>
+    <link href="public/css/minimal-isolate.css" rel='stylesheet'/>
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-block-ui/dist/angular-block-ui.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/jquery.easing/js/jquery.easing.min.js"></script>
+    <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+    
+    <script src="bower_components/ng-isotope/isotope.pkgd.js"></script>
+    <script src="bower_components/ng-isotope/ng-isotope.js"></script>
+
+
+    <script src="shopApp.js"></script>
+    <script src="routers/pawelrostek/router.js"></script>
+    <script src="services/pawelrostek/page.js"></script>
+    <script src="controllers/pawelrostek/homeController.js"></script>
+    <script src="controllers/pawelrostek/aboutController.js"></script>
+    <script src="controllers/pawelrostek/portfolioController.js"></script>
+</head>
+
+<body>
+
+<!-- Top Main Navbar -->
+<nav id="top-main-menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#top-main-page">Paweł Rostek</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden active">
+                    <a href="#top-main-page"></a>
+                </li>
+                <li><a href="#home-section" class="page-scroll">Home</a></li>
+                <li><a href="#about-section" class="page-scroll">O mnie</a></li>
+                <li><a href="#portfolio-section" class="page-scroll">Doświadczenie</a></li>
+                <li><a href="#contact-section" class="page-scroll">Kontakt</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<header id="continer-intro-text">
+    <div class="container">
+        <div class="nav-intro-text">
+            <h1 class="header-txt-section">Witam <br>
+              <span class="heavier">Cię</span> 
+                <br>na <br>
+                <span class="heavier">mojej <br>stronie.</span>
+            </h1>
+        </div>
+    </div>
+</header>
+
+<!-- LOGO SLIDESHOW -->
+<header id="top-main-page" class="fullscreen background parallax bg-dark-transp" data-img-width="1600" data-img-height="1080" data-diff="400"></header>
+
+<!-- Home content section -->
+<section id="home-section" class="fullscreen background parallax" data-img-width="1600" data-img-height="1080" data-diff="40" style="background:#222;">
+    <div data-ui-view></div>
+</section>
+
+<!-- About content section -->
+<section  id="about-section" class="background parallax bg-logo-head3" data-img-width="1600" data-img-height="1080" data-diff="40" autoscroll="true">
+    <div data-ui-view="vw-about"></div>
+</section>
+
+<!-- Portfolio content section -->
+<section id="portfolio-section" class="background parallax bg-logo-head1" data-img-width="1600" data-img-height="1080" data-diff="40">
+    <!-- <div data-ui-view="vw-portfolio" autoscroll='true'></div> -->
+    <div data-ui-view="vw-portfolio"></div>
+</section>
+
+<!-- Contact content section -->
+<section id="contact-section">
+    <div data-ui-view="vw-contact"></div>
+</section>
+
+<!-- Footer content section -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <span class="copyright">Copyright &copy; Paweł Rostek 2015</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#top-main-page" class="page-upper page-scroll"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true" style="font-size:18px; color: rgba(220,220,220,0.8);"></span></a>
+
+<script src="public/js/animatedHeader.js"></script>
+</body>
+</html>

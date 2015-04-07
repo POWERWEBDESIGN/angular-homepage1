@@ -1,0 +1,39 @@
+
+<div class="row row-centered">
+	<div class="col-sm-5 col-md-5 col-centered">
+		<div id="signin" class="jumbotron text-center box-shadow">
+		    <h2>Rejestracja</h2>
+		    <p>This page demonstrates <span class="text-danger">nested</span> views.</p>  
+
+			<form name="registryForm" ng-submit="registryFormSubmit()" validate >
+			    <div class="container">
+					
+					<div class="form-group">
+				        <input type="text" name="first_name" class="form-control" ng-model="first_name" required placeholder="Enter Your First Name">
+				        <p ng-show="registryForm.first_name.$invalid && !registryForm.first_name.$pristine" class="help-block">You first name is required.</p>
+				    </div>
+
+					<div class="form-group">
+				        <input type="text" name="last_name" class="form-control" ng-model="last_name" required placeholder="Enter Your Last Name">
+				        <p ng-show="registryForm.last_name.$invalid && !registryForm.last_name.$pristine" class="help-block">You last name is required.</p>
+				    </div>
+
+					<div class="form-group">
+				        <input type="text" name="login" class="form-control" ng-model="login" required placeholder="Enter Your Login" ng-minlength="4" ng-maxlength="8">
+				        <p ng-show="registryForm.login.$invalid && !registryForm.login.$pristine" class="help-block"><small class="text-danger text-xs">Enter correct login.</small></p>
+				    </div>
+
+					<div class="form-group">
+				        <input type="password" name="password" class="form-control" ng-model="password" required placeholder="Enter Your Password">
+				        <p ng-show="registryForm.password.$invalid && !registryForm.password.$pristine" class="help-block">You password is required.</p>
+				    </div>
+
+					<a ui-sref="home">
+						<button type="button" class="btn btn-default">Anuluj</button>
+					</a>
+					<button type="submit" class="btn btn-warning">Dodaj</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
